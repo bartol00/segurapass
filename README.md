@@ -7,7 +7,8 @@ A free-to-use, secure, zero-knowledge, end-to-end encrypted online password mana
 
 ## Introduction
 SeguraPass is an online desktop-based password manager built with Java, JavaFX and PostgreSQL, designed with one primary goal:
-Your passwords should belong only to you, and not the server, not the cloud and not the application developer.
+
+**Your passwords should belong only to you, and not the server, not the cloud and not the application developer.**
 
 Unlike traditional password managers, SeguraPass follows a zero-knowledge security model:
 
