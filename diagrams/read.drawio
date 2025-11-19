@@ -1,0 +1,67 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0" version="29.1.0">
+  <diagram name="Page-1" id="zCDT5smmc1LknagW83yb">
+    <mxGraphModel dx="1042" dy="563" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="rHjxN3cmid1bU1_RAtuz-1" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="Server" vertex="1">
+          <mxGeometry height="360" width="100" x="530" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="rHjxN3cmid1bU1_RAtuz-2" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="Client App" vertex="1">
+          <mxGeometry height="360" width="100" x="100" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="rHjxN3cmid1bU1_RAtuz-4" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" value="" vertex="1">
+          <mxGeometry height="60" width="60" x="680" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="rHjxN3cmid1bU1_RAtuz-5" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" target="rHjxN3cmid1bU1_RAtuz-1" value="GET credentials,&amp;nbsp;&lt;b&gt;userTokens&lt;/b&gt;">
+          <mxGeometry relative="1" width="80" x="-0.0221" y="10" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="150" y="200" as="sourcePoint" />
+            <mxPoint x="230" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rHjxN3cmid1bU1_RAtuz-6" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;" value="verifyToken(userTokens)">
+          <mxGeometry relative="1" width="80" x="0.0535" y="-36" as="geometry">
+            <mxPoint y="1" as="offset" />
+            <Array as="points">
+              <mxPoint x="506" y="240" />
+              <mxPoint x="506" y="270" />
+              <mxPoint x="580" y="270" />
+            </Array>
+            <mxPoint x="579.5" y="240" as="sourcePoint" />
+            <mxPoint x="580" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rHjxN3cmid1bU1_RAtuz-7" edge="1" parent="1" source="rHjxN3cmid1bU1_RAtuz-4" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" value="">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="660" y="299.5" as="sourcePoint" />
+            <mxPoint x="580" y="299.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rHjxN3cmid1bU1_RAtuz-8" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Credentials DB" vertex="1">
+          <mxGeometry height="30" width="100" x="660" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="rHjxN3cmid1bU1_RAtuz-9" edge="1" parent="1" source="rHjxN3cmid1bU1_RAtuz-1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="200 OK {encryptedCredentials, saltKey}">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="390" y="340" as="sourcePoint" />
+            <mxPoint x="149.5" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rHjxN3cmid1bU1_RAtuz-10" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;" value="&lt;div&gt;generateDecryptionKey(masterPassword, saltKey)&lt;/div&gt;&lt;div&gt;decryptCredentials(encryptedCredentials, decryptionKey)&lt;/div&gt;">
+          <mxGeometry relative="1" width="80" x="0.0995" y="80" as="geometry">
+            <mxPoint y="1" as="offset" />
+            <Array as="points">
+              <mxPoint x="230" y="380" />
+              <mxPoint x="230" y="420" />
+            </Array>
+            <mxPoint x="149.5" y="380" as="sourcePoint" />
+            <mxPoint x="149.5" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rHjxN3cmid1bU1_RAtuz-12" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=25;" value="READ CREDENTIALS" vertex="1">
+          <mxGeometry height="30" width="310" x="270" y="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

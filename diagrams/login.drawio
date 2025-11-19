@@ -1,0 +1,120 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0" version="29.1.0">
+  <diagram name="Page-1" id="G90mwFsWFVQp9qzJ2f1v">
+    <mxGraphModel dx="1042" dy="563" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="BUpBuanO-yNCbUcU8gaP-1" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="User" vertex="1">
+          <mxGeometry height="60" width="30" x="70" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="BUpBuanO-yNCbUcU8gaP-2" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="Server" vertex="1">
+          <mxGeometry height="800" width="100" x="490" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="BUpBuanO-yNCbUcU8gaP-3" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="Client App" vertex="1">
+          <mxGeometry height="800" width="100" x="180" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="BUpBuanO-yNCbUcU8gaP-4" edge="1" parent="1" source="BUpBuanO-yNCbUcU8gaP-1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" target="BUpBuanO-yNCbUcU8gaP-3" value="{email, masterPassword}">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="120" y="179.5" as="sourcePoint" />
+            <mxPoint x="200" y="179.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BUpBuanO-yNCbUcU8gaP-5" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;" value="&lt;div&gt;generatePrivateA()&lt;/div&gt;&lt;div&gt;generatePublicA(privateA)&lt;/div&gt;">
+          <mxGeometry relative="1" width="80" x="0.0302" y="70" as="geometry">
+            <mxPoint y="1" as="offset" />
+            <Array as="points">
+              <mxPoint x="310" y="180" />
+              <mxPoint x="310" y="230" />
+            </Array>
+            <mxPoint x="229.5" y="180" as="sourcePoint" />
+            <mxPoint x="229.5" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BUpBuanO-yNCbUcU8gaP-6" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" target="BUpBuanO-yNCbUcU8gaP-2" value="POST {email, publicA}">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="230" y="270" as="sourcePoint" />
+            <mxPoint x="570" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BUpBuanO-yNCbUcU8gaP-7" edge="1" parent="1" source="BUpBuanO-yNCbUcU8gaP-2" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;" target="BUpBuanO-yNCbUcU8gaP-2" value="&lt;div&gt;generatePrivateB()&lt;/div&gt;&lt;div&gt;generatePublicB(privateB)&lt;/div&gt;">
+          <mxGeometry relative="1" width="80" x="0.1435" y="-80" as="geometry">
+            <mxPoint y="1" as="offset" />
+            <Array as="points">
+              <mxPoint x="480" y="310" />
+              <mxPoint x="480" y="360" />
+            </Array>
+            <mxPoint x="570" y="310" as="sourcePoint" />
+            <mxPoint x="510" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BUpBuanO-yNCbUcU8gaP-8" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" value="" vertex="1">
+          <mxGeometry height="60" width="60" x="630" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="BUpBuanO-yNCbUcU8gaP-9" edge="1" parent="1" source="BUpBuanO-yNCbUcU8gaP-8" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" target="BUpBuanO-yNCbUcU8gaP-2" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="670" y="400" as="sourcePoint" />
+            <mxPoint x="560" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BUpBuanO-yNCbUcU8gaP-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=25;" value="LOGIN" vertex="1">
+          <mxGeometry height="40" width="190" x="320" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="BUpBuanO-yNCbUcU8gaP-12" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="User DB" vertex="1">
+          <mxGeometry height="30" width="60" x="630" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="BUpBuanO-yNCbUcU8gaP-13" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;exitX=0.5;exitY=0.689;exitDx=0;exitDy=0;exitPerimeter=0;" value="200 OK {saltAuth, publicB}">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="540" y="444.5" as="sourcePoint" />
+            <mxPoint x="229.5" y="444.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BUpBuanO-yNCbUcU8gaP-14" edge="1" parent="1" source="BUpBuanO-yNCbUcU8gaP-3" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;" target="BUpBuanO-yNCbUcU8gaP-3" value="&lt;div&gt;calculateS(saltAuth, email, masterPassword, privateA)&lt;/div&gt;&lt;div&gt;calculateClientM1(publicA, publicB, S)&lt;/div&gt;">
+          <mxGeometry relative="1" width="80" x="0.0995" y="65" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="315" y="490" />
+              <mxPoint x="315" y="530" />
+            </Array>
+            <mxPoint x="250" y="490" as="sourcePoint" />
+            <mxPoint x="310" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BUpBuanO-yNCbUcU8gaP-15" edge="1" parent="1" source="BUpBuanO-yNCbUcU8gaP-3" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="POST {email, clientM1}">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="229.5" y="570" as="sourcePoint" />
+            <mxPoint x="540" y="570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BUpBuanO-yNCbUcU8gaP-16" edge="1" parent="1" source="BUpBuanO-yNCbUcU8gaP-2" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;" value="&lt;div&gt;calculateS(publicA, privateB, verifier)&lt;/div&gt;&lt;div&gt;calculateServerM1(publicA, publicB, S)&lt;/div&gt;&lt;div&gt;secretsMatch(clientM1, serverM1)&lt;/div&gt;&lt;div&gt;generateTokens(email)&lt;/div&gt;&lt;div&gt;calculateServerM2(publicA, publicB, S, clientM1)&lt;/div&gt;">
+          <mxGeometry relative="1" width="80" x="0.2109" y="-30" as="geometry">
+            <mxPoint y="1" as="offset" />
+            <Array as="points">
+              <mxPoint x="430" y="600" />
+              <mxPoint x="430" y="710" />
+              <mxPoint x="540" y="710" />
+            </Array>
+            <mxPoint x="537.5" y="620" as="sourcePoint" />
+            <mxPoint x="540" y="710" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BUpBuanO-yNCbUcU8gaP-17" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="200 OK {userTokens, serverM2}">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="539.5" y="760" as="sourcePoint" />
+            <mxPoint x="229.5" y="760" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BUpBuanO-yNCbUcU8gaP-18" edge="1" parent="1" source="BUpBuanO-yNCbUcU8gaP-3" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;" target="BUpBuanO-yNCbUcU8gaP-3" value="&lt;div&gt;calculateClientM2(publicA, publicB, S, clientM1)&lt;/div&gt;&lt;div&gt;secretsMatch(clientM2, serverM2)&lt;/div&gt;&lt;div&gt;useTokens(userTokens)&lt;/div&gt;">
+          <mxGeometry relative="1" width="80" x="0.1533" y="40" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="330" y="800" />
+              <mxPoint x="330" y="860" />
+            </Array>
+            <mxPoint x="290" y="800" as="sourcePoint" />
+            <mxPoint x="380" y="840" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
