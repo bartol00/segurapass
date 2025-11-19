@@ -1,0 +1,76 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0" version="29.1.0">
+  <diagram name="Page-1" id="e83TPjwf94xCm83fr7zb">
+    <mxGraphModel dx="1042" dy="563" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="4rIl-pAollpR8DPAHvPf-1" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="User" vertex="1">
+          <mxGeometry height="60" width="30" x="50" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="4rIl-pAollpR8DPAHvPf-4" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="Client App" vertex="1">
+          <mxGeometry height="450" width="100" x="240" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="4rIl-pAollpR8DPAHvPf-5" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="Server" vertex="1">
+          <mxGeometry height="460" width="100" x="660" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="4rIl-pAollpR8DPAHvPf-6" parent="1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=25;" value="&lt;font&gt;REGISTRATION&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="200" x="360" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="4rIl-pAollpR8DPAHvPf-8" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" target="4rIl-pAollpR8DPAHvPf-4" value="{email, masterPassword}">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="100" y="159.5" as="sourcePoint" />
+            <mxPoint x="220" y="159.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4rIl-pAollpR8DPAHvPf-11" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="350" y="270" as="sourcePoint" />
+            <mxPoint x="289.5" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4rIl-pAollpR8DPAHvPf-12" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="289.5" y="190" as="sourcePoint" />
+            <mxPoint x="350" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4rIl-pAollpR8DPAHvPf-13" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="350" y="270" as="sourcePoint" />
+            <mxPoint x="350" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4rIl-pAollpR8DPAHvPf-14" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="generateAuthSalt()" vertex="1">
+          <mxGeometry height="30" width="60" x="380" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="4rIl-pAollpR8DPAHvPf-15" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="generateCredentialSalt()" vertex="1">
+          <mxGeometry height="30" width="60" x="395" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="4rIl-pAollpR8DPAHvPf-16" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="generateVerifier(authSalt, email, masterPassword)" vertex="1">
+          <mxGeometry height="30" width="320" x="330" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="4rIl-pAollpR8DPAHvPf-17" edge="1" parent="1" source="4rIl-pAollpR8DPAHvPf-4" style="endArrow=classic;html=1;rounded=0;" target="4rIl-pAollpR8DPAHvPf-5" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="500" y="360" />
+            </Array>
+            <mxPoint x="450" y="370" as="sourcePoint" />
+            <mxPoint x="540" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4rIl-pAollpR8DPAHvPf-18" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="POST {email, verifier, authSalt, keySalt}" vertex="1">
+          <mxGeometry height="40" width="330" x="325" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="4rIl-pAollpR8DPAHvPf-19" edge="1" parent="1" source="4rIl-pAollpR8DPAHvPf-5" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="450" y="440" as="sourcePoint" />
+            <mxPoint x="289.5" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4rIl-pAollpR8DPAHvPf-20" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="200 OK" vertex="1">
+          <mxGeometry height="30" width="60" x="455" y="410" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
