@@ -230,6 +230,39 @@ Documenting cryptographic choices, assumptions and architecture helps users and 
 
 ## Security Considerations
 
+SeguraPass is designed from the ground up with security as the highest priority. The following considerations summarize the key design decisions and precautions taken:
+
+### 1. Authentication and Password Protection
+
+- **SRP-6 Protocol**: The Secure Remote Password protocol was chosen over custom schemes to avoid pitfalls like offline attacks. SRP ensures that the master password is never transmitted and the server cannot derive it, even if the database is compromised
+- **Ephemeral Values**: Large integers, nonces and ephemeral values are carefully generated and handled using cryptographically secure random generators, with temporary storage only as needed during authentication
+- **Battle-Tested Libraries**: All cryptographic operations leverage BouncyCastle to avoid the risks inherent in custom crypto implementations
+
+### 2. End-to-End Encryption
+
+- **AES-256-GCM**: All user credentials are encrypted on the client before leaving the device. Each credential field (website, email/username, password) is encrypted separately using AES-GCM with a random 12-byte IV for each field
+- **Key Derivation**: Encryption keys are derived from the user’s master password combined with a per-user salt using Argon2id. This ensures strong resistance against brute-force attacks
+- **Zero-Knowledge Design**: The server only stores encrypted blobs and never sees the master password or unencrypted credentials. Even if the backend were breached, the credentials would remain confidential
+
+### 3. Secure Client-Server Communication
+
+- **HTTPS via Cloudflare Tunnel**: All client-server communication is encrypted using TLS. Cloudflare tunnels further protect the server by hiding its IP and accepting traffic only through the tunnel
+- **JWT Authentication**: Client requests are authenticated using JWTs, validated for expiry and integrity. This prevents unauthorized access and replay attacks
+- **Input Validation and Error Handling**: The client validates server responses and handles errors securely, avoiding potential injection or corruption attacks
+
+### 4. Update Security
+
+- **Version Endpoint**: Clients check for new versions via a dedicated endpoint. Updates are downloaded from a trusted source over HTTPS
+- **Installer Safety**: By leveraging Inno Setup, installers can safely replace previous versions, ensuring that users are always running the latest secure build
+
+### 5. General Design
+
+- **Defense-in-Depth**: Multiple layers of security are used, notably SRP for authentication, AES-GCM for credentials handling and TLS for transport. This ensures that compromising one layer does not expose sensitive data
+- **Secure Defaults**: Random salts, strong key derivation and ephemeral values are applied by default to all cryptographic operations
+- **Separation of Concerns**: Authentication, encryption, UI and API logic are modularized, reducing the likelihood of security bugs
+- **Transparency and Documentation**: All cryptographic choices, assumptions and flow diagrams are documented, increasing trust for users and maintainers.
+
+  
 ## Installation Instructions
 
 The user should simply download the executable file (or the zip file and extract the same executable from within) and follow the on-screen instructions in the wizard to install the app.
