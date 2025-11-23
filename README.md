@@ -100,7 +100,7 @@ The base operations are described below. Note: **N** and **g** are fixed primes 
 
 ### 1. Registering as a new user
 
-![registration_flow](diagrams/register.png)
+![registration_flow](assets/diagrams/register.png)
 
 For both registration and login, SeguraPass uses SRP-6, a proven password-authenticated key exchange protocol that allows secure registration/login without ever sending the password to the server. 
 
@@ -121,7 +121,7 @@ Before the user can use the service, they must verify their account by clicking 
 
 ### 2. Logging in as an existing user
 
-![login_flow](diagrams/login.png)
+![login_flow](assets/diagrams/login.png)
 
 During login, the master password again never leaves the device. The authentication of the user is performed using proof messages and public key parameters, in a way that sensitive data on both the client and server side are never exposed to the public. 
 
@@ -139,7 +139,7 @@ The result is a mutually authenticated session where the client then uses a shor
 
 ### 3. Writing credentials
 
-![write_credentials_flow](diagrams/write.png)
+![write_credentials_flow](assets/diagrams/write.png)
 
 Once the user is logged in, the client needs a stable cryptographic key for AES encryption/decryption.
 
@@ -162,7 +162,7 @@ When a write operation is performed (creating or updating credentials), a new 12
 
 ### 4. Reading credentials
 
-![read_credentials_flow](diagrams/read.png)
+![read_credentials_flow](assets/diagrams/read.png)
 
 The authenticated user retrieves the encrypted credentials and its associated IVs from the server and simply performs the decryption using the same cryptographic key as obtained during the write operation.
 
