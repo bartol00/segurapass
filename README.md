@@ -194,6 +194,34 @@ Packaging / Deployment:
 
 ## Application Screenshots
 
+### 1. Registering a new user
+
+![register](assets/screenshots/register.png)
+
+### 2. Logging in as an existing user
+
+![login](assets/screenshots/login.png)
+
+### 3. User dashboard after successfully logging in
+
+![dashboard](assets/screenshots/dashboard.png)
+
+### 4. Adding new credentials
+
+![add](assets/screenshots/add.png)
+
+### 5. New dashboard state after adding credentials
+
+![dashboard-added](assets/screenshots/dashboard-added.png)
+
+### 6. Updating existing credentials
+
+![update](assets/screenshots/update.png)
+
+### 7. Deleting credentials
+
+![delete](assets/screenshots/delete.png)
+
 ## Challenges
 
 ### 1. Secure Authentication with SRP-6a
